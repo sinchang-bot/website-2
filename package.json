@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "davecalnan",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "description": "Personal website.",
+  "version": "1.0.0",
+  "author": "Dave Calnan <d@ve.ie>",
   "dependencies": {
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
