@@ -37,14 +37,27 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
-            </p>
+            <div>
+              <p>
+                Hi, my name is <strong>{author}</strong>. This is by website. If you'd like to find me elsewhere (you creep), I'm on{" "}
+                <a href={`https://twitter.com/${social.twitter}`}>
+                  Twitter
+                </a>
+                ,{" "}
+                <a href={`https://github.com/${social.github}`}>
+                  Github
+                </a>
+                ,{" "}
+                <a href={`https://instagram.com/${social.instagram}`}>
+                  Instagram
+                </a>
+                , and{" "}
+                <a href={`https://linkedin.com/in/${ social.linkedin}`}>
+                  LinkedIn
+                </a>
+                .
+              </p>
+            </div>
           </div>
         )
       }}
@@ -65,6 +78,9 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
+          github
+          instagram
+          linkedin
           twitter
         }
       }
