@@ -42,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
+          coverImageRegex: post.node.fields.coverImageRegex,
           previous,
           next,
         },
@@ -56,11 +57,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const postPath = createFilePath({ node, getNode, trailingSlash: false })
+    const path = createFilePath({ node, getNode, trailingSlash: false })
     createNodeField({
       name: `slug`,
       node,
-      value: postPath
+      value: path
+    })
+    createNodeField({
+      name: `coverImageRegex`,
+      node,
+      value: `/${path}/cover-image/`
     })
   }
 }
