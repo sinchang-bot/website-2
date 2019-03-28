@@ -13,7 +13,6 @@ class BlogPostTemplate extends React.Component {
     const coverImage = this.props.data.coverImage
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    console.log(this.props.data)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -34,7 +33,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <Image
           fluid={coverImage.childImageSharp.fluid}
-          alt={''}
+          alt={""}
         />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr

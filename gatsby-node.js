@@ -16,6 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               fields {
                 slug
+                coverImageRegex
               }
               frontmatter {
                 title
